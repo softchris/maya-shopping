@@ -1,40 +1,16 @@
 <html>
  <head>
-   <style>
-   .items {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
-
-   .item {
-     box-shadow: 0 0 5px gray;
-     max-width: 350px;
-   }
-
-   .item img {
-     width: 100%;
-   }
-
-   .item .button {
-      padding: 20 0px;
-      float: right;
-      margin: 10px;
-   }
-
-   .item .description {
-     padding: 10;
-   }
-
-   </style>
+   <link rel="stylesheet" href="frontend.css" />
  </head>
  <body>
-  <h1>{{header}}</h1>
-
-  <h2>Items</h2>
-  <div class="cart">
+  <div class="menu">
+    <h2>Mayan e-commerce</h2>
+  </div>
+  <div id="cart" class="cart"></div>
+  <div id="checkout" >
     <button onclick="checkout()">Checkout</button>
   </div>
+
   <div class="items">
   {{#items}}
     <div class="item">
@@ -45,7 +21,7 @@
         {{description}}
       </div>
       <div class="button">
-        <button onclick="add({{id}})">Add</button>
+        <button onclick="add({{id}}, {{encodeURI(url)}})">Add</button>
       </div>
     </div>
     
@@ -54,23 +30,6 @@
   </body>
 </html>
 
-<script>
-  function add(id) {
-    console.log('id', id);
-    fetch('/add', {
-      'method': 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ id })
-    })
-  }
-
-  function checkout() {
-    fetch('/checkout', {
-      'method': 'POST',
-    })
-      .then(res => res.json())
-      .then(json => console.log(json))
-  }
+<script src="frontend.js">
+  
 </script>
