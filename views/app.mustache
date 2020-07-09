@@ -1,0 +1,76 @@
+<html>
+ <head>
+   <style>
+   .items {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .item {
+     box-shadow: 0 0 5px gray;
+     max-width: 350px;
+   }
+
+   .item img {
+     width: 100%;
+   }
+
+   .item .button {
+      padding: 20 0px;
+      float: right;
+      margin: 10px;
+   }
+
+   .item .description {
+     padding: 10;
+   }
+
+   </style>
+ </head>
+ <body>
+  <h1>{{header}}</h1>
+
+  <h2>Items</h2>
+  <div class="cart">
+    <button onclick="checkout()">Checkout</button>
+  </div>
+  <div class="items">
+  {{#items}}
+    <div class="item">
+      <div>
+        <img src="{{url}}">
+      </div>
+      <div class="description">
+        {{description}}
+      </div>
+      <div class="button">
+        <button onclick="add({{id}})">Add</button>
+      </div>
+    </div>
+    
+  {{/items}}
+  </div>
+  </body>
+</html>
+
+<script>
+  function add(id) {
+    console.log('id', id);
+    fetch('/add', {
+      'method': 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ id })
+    })
+  }
+
+  function checkout() {
+    fetch('/checkout', {
+      'method': 'POST',
+    })
+      .then(res => res.json())
+      .then(json => console.log(json))
+  }
+</script>
