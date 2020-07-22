@@ -18,4 +18,4 @@ node app.js
 
 The app should be up and running on port `3000` on your localhost (http://localhost:3000).
 
-Try adding items to the cart. If you can add the one item you need for this part of the game into your cart, the attached API will tell you what
+Try adding items to the cart. If you can add the one item you need for this part of the game into your cart, the attached API will tell you what the code is to enable delivery of your gear AND reveal the name of the second glyph that makes up the mysterious temple's name.
