@@ -2,7 +2,7 @@
 
 By running this application using Node.js, you will be able to gather the gear you need to dive into the mysterious cenote as described in Part 2 of the [Azure Maya Mystery](https://aka.ms/AzureMayaMystery).
 
-This app is built with Node.js. To learn all about Node, please visit Microsoft Learn's Node.js [learning path](https://docs.microsoft.com/en-gb/learn/paths/build-javascript-applications-nodejs/?WT.mc_id=mayamystery-playfab-jelooper).
+This app is built with Node.js. To learn all about Node, please visit Microsoft Learn's Node.js [learning path](https://docs.microsoft.com/learn/paths/build-javascript-applications-nodejs/?WT.mc_id=academic-0000-chnoring).
 
 Start by installing all the app's dependencies
 
