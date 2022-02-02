@@ -1,6 +1,8 @@
 Remember this
 Another change
 
+new feature
+
 # Welcome to the Cenote Shoppe Shopping Cart App
 
 By running this application using Node.js, you will be able to gather the gear you need to dive into the mysterious cenote as described in Part 2 of the [Azure Maya Mystery](https://aka.ms/AzureMayaMystery).
